@@ -7,7 +7,6 @@ import { HttpService } from './http.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'IA-frontend-test';
   public subscription = { name: '', phone: '', email: '', dni: '' };
 
   constructor(private httpService: HttpService){}

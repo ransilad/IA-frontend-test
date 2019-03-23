@@ -1,0 +1,54 @@
+.bg-phone {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  background-image: url('/assets/background-phone.jpg');
+  background-size: cover;
+}
+
+.font-weight-100 {
+  font-weight: 100 !important;
+}
+
+.font-weight-300 {
+  font-weight: 300 !important;
+}
+
+.btn-green {
+  color: #fff;
+  background-color: #53bf95;
+
+  &:focus,
+  &:hover {
+    background-color: #2fb581;
+    border-color: #2fb581;
+  }
+}
+
+
+// PLACEHOLDERS TEXT
+::-webkit-input-placeholder {
+  color: #8D8D8D !important;
+  font-weight: 100;
+  font-size: 0.8em;
+}
+:-moz-placeholder {
+  color: #8D8D8D !important;
+  font-weight: 100;
+  font-size: 0.8em;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: #8D8D8D !important;
+  font-weight: 100;
+  font-size: 0.8em;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #8D8D8D !important;
+  font-weight: 100;
+  font-size: 0.8em;
+}
