@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HttpService {
 
-  baseUrl:string = "http://127.0.0.1:5000";
+  // baseUrl:string = "http://127.0.0.1:5000";
+  baseUrl:string = "http://3.18.197.205";
 
   constructor(private httpClient : HttpClient) {}
 
