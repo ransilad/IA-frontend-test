@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpService } from './http.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +10,15 @@ import { HttpService } from './http.service';
 export class AppComponent {
   public subscription = { name: '', phone: '', email: '', dni: '' };
 
-  constructor(private httpService: HttpService){}
+  constructor(private httpService: HttpService, private toastr: ToastrService){}
 
   postSubscriptions() {
     this.httpService.post_subscriptions(this.subscription).subscribe(apiResult => {
       if (apiResult.success) {
-        alert('Se grabó exitosamente');
+        this.toastr.success(apiResult.message);
         this.subscription = { name: '', phone: '', email: '', dni: '' };
       } else {
-        console.log('Error');
+        this.toastr.error(apiResult.message);
       }
     });
   }
