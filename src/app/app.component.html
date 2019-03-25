@@ -18,7 +18,7 @@
       </div>
       <div class="form-group col-md-6">
         <label class="font-weight-100">Teléfono <span class="text-danger-light">*</span></label>
-        <input name="phone" type="tel"  inputmode="numeric" class="form-control" formControlName="phone" placeholder="Ej. 56937729376" />
+        <input name="phone" type="tel"  inputmode="numeric" class="form-control" formControlName="phone" placeholder="Ej. 56937729376" mask="00000000000" />
         <div *ngIf="submitted && f.phone.errors" class="font-weight-100 font-size-sm mt-2 text-warning">
             <div *ngIf="f.phone.errors.required">El teléfono es requerido</div>
             <div *ngIf="f.phone.errors.minlength">El teléfono debe tener 11 numeros</div>
