@@ -7,6 +7,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule } from 'ngx-mask';
+import { Ng2Rut } from 'ng2-rut';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NgxMaskModule } from 'ngx-mask';
     FormsModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
+    Ng2Rut
   ],
   providers: [],
   bootstrap: [AppComponent]

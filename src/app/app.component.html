@@ -37,10 +37,10 @@
       </div>
       <div class="form-group col-md-6">
         <label class="font-weight-100">RUT <span class="text-danger-light">*</span></label>
-        <input name="dni" type="text" class="form-control" formControlName="dni" placeholder="Ej. 26492283-1" />
+        <input name="dni" type="text" class="form-control" formControlName="dni" placeholder="Ej. 26.492.283-1" formatRut />
         <div *ngIf="submitted && f.dni.errors" class="font-weight-100 font-size-sm mt-2 text-warning">
             <div *ngIf="f.dni.errors.required">El RUT es requerido</div>
-            <div *ngIf="f.dni.errors.pattern">El RUT debe tener el formato correcto. Ej. 26492283-1</div>
+            <div *ngIf="f.dni.errors.invalidRut">El RUT no es válido</div>
         </div>
       </div>
     </div>

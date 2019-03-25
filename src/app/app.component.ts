@@ -21,14 +21,12 @@ export class AppComponent implements OnInit {
       name: new FormControl('', Validators.required),
       phone: new FormControl('', [Validators.required, Validators.minLength(11), Validators.pattern('[0-9]*')]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      dni: new FormControl('', [Validators.required, Validators.pattern('\\d{3,8}-[\\d|kK]{1}')])
+      dni: new FormControl('', [Validators.required])
     });
   }
 
   // convenience getter for easy access to form fields
-  get f() {
-    return this.subscriptionForm.controls;
-  }
+  get f() { return this.subscriptionForm.controls; }
 
   postSubscriptions() {
     this.submitted = true;
